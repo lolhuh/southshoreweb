@@ -1,0 +1,179 @@
+:root {
+  --brand-blue: #5394C5;
+  --off-white: #FFFFFD;
+  --deep-plum: #3F3047;
+  --muted-green: #5B8266;
+  --lime-green: rgb(150, 188, 46);
+}
+
+/* Page background */
+body {
+  background: radial-gradient(circle at top left, #6badde 0, var(--brand-blue) 35%, #365b7c 100%);
+  color: var(--off-white);
+}
+
+/* Hero */
+
+.dental-hero {
+  padding: 5rem 0 3.5rem;
+  text-align: center;
+}
+
+.dental-hero h1 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  color: var(--off-white);
+  margin-bottom: 0.6rem;
+}
+
+.dental-hero p {
+  max-width: 640px;
+  margin: 0 auto;
+  color: rgba(248, 250, 252, 0.9);
+  font-size: 0.98rem;
+}
+
+.dental-pill-row {
+  margin-top: 1.4rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.dental-pill {
+  padding: 0.25rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--off-white);
+  background: rgba(4, 20, 34, 0.25);
+}
+
+/* Grid section */
+.container { 
+    background: transparent;
+}
+
+.dental-grid-section {
+  padding: 0 0 4.5rem;
+}
+
+.dental-grid-header {
+  text-align: left;
+  margin-bottom: 1.6rem;
+  background: transparent;
+  position: static;
+}
+
+.dental-grid-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  color: var(--off-white);
+}
+
+.dental-grid-header p {
+  font-size: 0.95rem;
+  color: rgba(232, 241, 250, 0.92);
+  background: transparent;
+}
+
+/* Cards */
+
+.dental-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.4rem;
+}
+
+.dental-card {
+  background: rgba(3, 16, 28, 0.96);
+  border-radius: 1.1rem;
+  padding: 1rem 1.1rem 1.1rem;
+  border: 1px solid rgba(10, 34, 58, 0.8);
+  box-shadow: 0 16px 40px rgba(3, 7, 18, 0.55);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transform: translateY(0);
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+              border-color 0.15s ease, background 0.15s ease;
+}
+
+.dental-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(3, 7, 18, 0.8);
+  border-color: rgba(150, 188, 46, 0.9);
+  background: rgba(2, 13, 26, 0.98);
+}
+
+.dental-card span.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.16rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  color: #e5f0ff;
+  margin-bottom: 0.2rem;
+}
+
+/* badge color accents */
+
+.badge-core {
+  border-color: rgba(83, 148, 197, 0.95);
+}
+
+.badge-cosmetic {
+  border-color: rgba(150, 188, 46, 0.95);
+}
+
+.badge-restorative {
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.dental-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
+  color: var(--off-white);
+}
+
+.dental-card p {
+  font-size: 0.86rem;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.dental-card ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.8rem;
+  color: rgba(191, 219, 254, 0.95);
+}
+
+/* Back link */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  color: #e5f0ff;
+  text-decoration: none;
+  margin-top: 0.9rem;
+}
+
+.back-link::before {
+  content: "←";
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+  .dental-hero {
+    padding-top: 4rem;
+  }
+}

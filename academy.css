@@ -1,0 +1,451 @@
+:root {
+  --brand-blue: #5394c5;
+  --off-white: #fffffd;
+  --deep-plum: #3f3047;
+  --muted-green: #5b8266;
+  --accent-lime: #96bc2e;
+}
+
+/* HERO */
+
+.academy-hero {
+  position: relative;
+  padding: 5.5rem 0 4.5rem;
+  background:
+    radial-gradient(circle at 12% 0%, #96bc2e, transparent 55%), /* lime */
+    radial-gradient(circle at 88% 100%, #5394c5, transparent 55%), /* brand-blue */
+    linear-gradient(135deg, #3F3047 0%, #041014 45%, #0b1824 100%); /* deep-plum base */
+  color: var(--off-white);
+  overflow: hidden;
+}
+
+
+.academy-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 3rem;
+}
+
+.academy-hero-text .badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(150, 188, 46, 0.12);
+  color: #cde99c;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.academy-hero-text h1 {
+  font-size: clamp(2.1rem, 3.3vw, 2.8rem);
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.academy-hero-text .lead {
+  max-width: 34rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.98rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Pills */
+
+.hero-pill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.7rem;
+}
+
+.hero-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(9, 24, 22, 0.65);
+  border: 1px solid rgba(191, 227, 176, 0.3);
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.dot-live {
+  background: #ff6b6b;
+}
+
+.dot-sim {
+  background: #5394c5;
+}
+
+.dot-cert {
+  background: #96bc2e;
+}
+
+.dot-clock {
+  background: #ffc857;
+}
+
+/* Buttons */
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.btn-primary,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--brand-blue);
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(83, 148, 197, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 36px rgba(83, 148, 197, 0.4);
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #f4f4f4;
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  background: rgba(10, 26, 24, 0.9);
+}
+
+/* Right card */
+
+.academy-hero-media {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.academy-hero-card {
+  width: 100%;
+  max-width: 360px;
+  padding: 1.4rem 1.4rem 1.3rem;
+  border-radius: 1.4rem;
+  background: radial-gradient(circle at top left, rgba(150, 188, 46, 0.32), rgba(9, 24, 22, 0.95));
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(195, 233, 192, 0.28);
+  backdrop-filter: blur(18px);
+  animation: Card1 5s ease-in-out infinite alternate;
+}
+
+
+@keyframes Card1 {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.tag-row {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.live-pill,
+.intake-pill {
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+}
+
+.live-pill {
+  background: rgba(255, 107, 107, 0.16);
+  color: #ffc9c9;
+}
+
+.intake-pill {
+  background: rgba(150, 188, 46, 0.16);
+  color: #e3f3b1;
+}
+
+.academy-hero-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+
+.academy-hero-card p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 0.9rem;
+}
+
+.stat-list {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+}
+
+.stat-value {
+  font-size: 0.9rem;
+}
+
+/* CTA inside card */
+
+.btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: transparent;
+  color: #ffffff;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+/* Blobs */
+
+.academy-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.9;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+/* brand-blue circle */
+.academy-blob-1 {
+  width: 260px;
+  height: 260px;
+  background: rgba(83, 148, 197, 0.85);      /* var(--brand-blue) */
+  top: -60px;
+  right: -40px;
+  animation: floatBlob1 22s ease-in-out infinite alternate;
+}
+
+/* lime + muted-green circle */
+.academy-blob-2 {
+  width: 230px;
+  height: 230px;
+  background: radial-gradient(
+    circle,
+    rgba(150, 188, 46, 0.85),               /* var(--lime-green) */
+    rgba(91, 130, 102, 0.5)                 /* var(--muted-green) */
+  );
+  bottom: -80px;
+  left: -30px;
+  animation: floatBlob2 26s ease-in-out infinite alternate;
+}
+
+@keyframes floatBlob1 {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(-18px, 14px, 0) scale(1.06); }
+  100% { transform: translate3d(10px, -10px, 0) scale(0.98); }
+}
+
+@keyframes floatBlob2 {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(18px, -18px, 0) scale(1.05); }
+  100% { transform: translate3d(-12px, 10px, 0) scale(0.97); }
+}
+
+
+/* COURSES / SPECIALTIES SECTION */
+
+.academy-courses {
+  padding: 4.5rem 0 4rem;
+  background: #f6f8fb;
+}
+
+.courses-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+    position: static; 
+    background: transparent;
+}
+
+.courses-header h2 {
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
+  color: var(--deep-plum);
+  margin-bottom: 0.6rem;
+}
+
+.courses-header p {
+  font-size: 0.98rem;
+  color: #4b4b5d;
+}
+
+/* Reuse your existing specialty grid styles, just tighten gaps */
+
+.specialty-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.4rem 1.2rem;
+}
+
+/* If you already have .specialty-card etc. in style.css, you can keep this minimal. */
+
+.specialty-card {
+  position: relative;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  background: #111827;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.35);
+  transform: translateY(0);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border 0.18s ease;
+  border: 1px solid rgba(15, 23, 42, 0.65);
+}
+
+.specialty-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.45);
+  border-color: rgba(150, 188, 46, 0.75);
+}
+
+.specialty-media {
+  min-height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.specialty-overlay {
+  padding: 1.1rem 1.1rem 1rem;
+  background: linear-gradient(to top, rgba(3, 7, 18, 0.93), rgba(3, 7, 18, 0.65));
+  color: #e5e7eb;
+}
+
+.specialty-overlay h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.specialty-overlay p {
+  font-size: 0.86rem;
+  margin-bottom: 0.75rem;
+  color: #cbd5f5;
+}
+
+.specialty-cta {
+  font-size: 0.85rem;
+  color: var(--accent-lime);
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 960px) {
+  .academy-hero-inner {
+    grid-template-columns: minmax(0, 1.1fr);
+  }
+
+  .academy-hero-media {
+    justify-content: flex-start;
+  }
+
+  .academy-hero-card {
+    max-width: 420px;
+    margin-top: 1.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .academy-hero {
+    padding: 4.3rem 0 3.3rem;
+  }
+
+  .hero-pill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    width: 100%;
+  }
+
+  .specialty-media {
+    min-height: 160px;
+  }
+}
+
+
+/* map each card to your images */
+.specialty-bvoc {
+  background-image: url("academy/Patientcare.jpg");
+}
+.specialty-careasst {
+  background-image: url("academy/Patientcareasst.jpg");
+}
+.specialty-ger {
+  background-image: url("academy/Geriatric.jpg");
+}
+.specialty-dent {
+  background-image: url("academy/DentalHy.jpg");
+}
+.specialty-dental {
+  background-image: url("academy/DentalHy.jpg");
+}
+.specialty-para {
+  background-image: url("academy/Paramedical.jpg");
+}
+.specialty-hosp {
+  background-image: url("academy/Hospitaladmin.jpg");
+}
+.specialty-med {
+  background-image: url("academy/MedicalCoding.jpg");
+}
+.specialty-medical {
+  background-image: url("academy/MedicalCoding.jpg");
+}
+.specialty-first {
+  background-image: url("academy/FirstAid.jpg");
+}
+.specialty-pall {
+  background-image: url("academy/Palliative.jpg");
+}
+
+
+
+
+/* greenish illuminated border on hover */
